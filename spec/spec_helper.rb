@@ -4,4 +4,4 @@ require 'simplecov'
 SimpleCov.start do
 end
 
-require './slib/enigma'
+require './lib/enigma'
