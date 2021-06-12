@@ -25,7 +25,7 @@ RSpec.describe Enigma do
       encryption = {
         encryption: "keder ohulw",
         key: "02715",
-        date: # today's date in format "DDMMYY"
+        date: Date.today
       }
       expect(enigma.encrypt("hello world", "02715")).to eq(encryption)
     end
@@ -45,7 +45,7 @@ RSpec.describe Enigma do
       decryption = {
         decryption: "hello world",
         key: "02715",
-        date: # today's date in format "DDMMYY"
+        date: Date.today
       }
       expect(enigma.decrypt(encrypted[:encryption], "02715")).to eq(decryption)
     end
@@ -55,7 +55,7 @@ RSpec.describe Enigma do
       encryption = {
         encryption: "keder ohulw",
         key: "02715",
-        date: # today's date in format "DDMMYY"
+        date: Date.today
       }
       expect(enigma.encrypt('hello world')).to eq(encryption)
     end
