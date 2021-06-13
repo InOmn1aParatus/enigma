@@ -10,7 +10,4 @@ class Enigma
     # @encrypt = Encrypt.new.encrypt
     # @encrypt = Decrypt.new.decrypt
   end
-
-  # def encrypt(message, key = random_key, date = Date.today)
-  # end
 end
