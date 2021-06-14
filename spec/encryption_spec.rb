@@ -7,4 +7,10 @@ RSpec.describe Encryption do
       expect(e).to be_a(Encryption)
     end
   end
+
+  context 'methods' do
+    # it 'performs decryption' do
+      
+    # end
+  end
 end
