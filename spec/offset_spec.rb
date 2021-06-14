@@ -35,10 +35,10 @@ RSpec.describe Offset do
 
     it 'determines rotations from key' do
       offset = Offset.new('12345', '200989')
-      expect(offset.a_rotation).to eq(12)
-      expect(offset.b_rotation).to eq(23)
-      expect(offset.c_rotation).to eq(34)
-      expect(offset.d_rotation).to eq(45)
+      expect(offset.a_key).to eq(12)
+      expect(offset.b_key).to eq(23)
+      expect(offset.c_key).to eq(34)
+      expect(offset.d_key).to eq(45)
     end
 
     it 'determines offset from date' do
@@ -47,6 +47,14 @@ RSpec.describe Offset do
       expect(offset.b_offset).to eq(1)
       expect(offset.c_offset).to eq(2)
       expect(offset.d_offset).to eq(1)
+    end
+
+    it 'calculates shift based on key and date' do
+      offset = Offset.new('12345', '200989')
+      expect(offset.a_shift).to eq(20)
+      expect(offset.b_shift).to eq(24)
+      expect(offset.c_shift).to eq(36)
+      expect(offset.d_shift).to eq(46)
     end
   end
 end
