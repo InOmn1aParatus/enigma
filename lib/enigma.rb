@@ -9,9 +9,13 @@ class Enigma
 
   def initialize
     @characters = CharacterList.new.list
-    # @encrypt = Encrypt.new.encrypt
-    # @encrypt = Decrypt.new.decrypt
+    # @encrypt = Encryption.new.encrypt
+    # @encrypt = Decryption.new.decrypt
     # @key = KeyGen.new
     # @offset = Offset.new
+  end
+
+  def encrypt
+
   end
 end
