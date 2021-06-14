@@ -27,19 +27,19 @@ class Offset
     rand(99_999).to_s.rjust(5, '0')
   end
 
-  def a_rotation
+  def a_key
     @key[0..1].to_i
   end
 
-  def b_rotation
+  def b_key
     @key[1..2].to_i
   end
 
-  def c_rotation
+  def c_key
     @key[2..3].to_i
   end
 
-  def d_rotation
+  def d_key
     @key[3..4].to_i
   end
 
@@ -58,4 +58,21 @@ class Offset
   def d_offset
     @offset[3].to_i
   end
+
+  def a_shift
+    a_key + a_offset
+  end
+  
+  def b_shift
+    b_key + b_offset
+  end
+  
+  def c_shift
+    c_key + c_offset
+  end
+  
+  def d_shift
+    d_key + d_offset
+  end
+
 end
