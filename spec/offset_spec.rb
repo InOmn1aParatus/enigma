@@ -18,5 +18,11 @@ RSpec.describe Offset do
       offset = Offset.new
       expect(offset.generate('200989')).to eq('8121')
     end
+
+    it 'generates offset with current date' do
+      offset = Offset.new
+      expect(offset.generate).to be_a(String)
+      expect(offset.generate.length).to eq(4)
+    end
   end
 end
