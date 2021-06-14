@@ -1,6 +1,6 @@
 require_relative './character_list'
-require_relative './encrypt'
-require_relative './decrypt'
+require_relative './encryption'
+require_relative './decryption'
 require_relative './offset'
 
 class Enigma
