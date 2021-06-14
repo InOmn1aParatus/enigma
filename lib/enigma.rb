@@ -1,7 +1,6 @@
 require_relative './character_list'
 require_relative './encrypt'
 require_relative './decrypt'
-require_relative './key_gen'
 require_relative './offset'
 
 class Enigma
@@ -14,6 +13,4 @@ class Enigma
     # @key = KeyGen.new
     # @offset = Offset.new
   end
-
-  def encrypt; end
 end
