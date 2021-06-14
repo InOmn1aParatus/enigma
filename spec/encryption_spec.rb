@@ -10,7 +10,7 @@ RSpec.describe Encryption do
 
   context 'methods' do
     # it 'performs decryption' do
-      
+
     # end
   end
 end

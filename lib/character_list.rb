@@ -1,5 +1,5 @@
 class CharacterList
   def list
-    ("a".."z").to_a << " "
+    ('a'..'z').to_a << ' '
   end
 end

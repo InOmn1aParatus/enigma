@@ -15,7 +15,5 @@ class Enigma
     # @offset = Offset.new
   end
 
-  def encrypt
-
-  end
+  def encrypt; end
 end
