@@ -9,6 +9,11 @@ RSpec.describe Offset do
   end
 
   context ' methods' do
+    it 'generates random key' do
+      offset = Offset.new
+      expect(offset.key_gen.length).to eq(5)
+    end
+    
     it 'generates offset based on given date' do
       offset = Offset.new
       expect(offset.generate('200989')).to eq('8121')
