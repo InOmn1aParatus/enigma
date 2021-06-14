@@ -23,7 +23,7 @@ RSpec.describe Offset do
     end
     
     it 'generates offset based on given date' do
-      offset = Offset.new(date: '200989')
+      offset = Offset.new('12345', '200989')
       expect(offset.offset).to eq('8121')
     end
 
@@ -33,11 +33,12 @@ RSpec.describe Offset do
       expect(offset.offset_gen.length).to eq(4)
     end
 
-    xit 'uses key to create A-D shift' do
-      offset = Offset.new
-      allow(offset).to receive(:key_gen).and_return('12345')
-      offset
-
+    it 'gathers rotations from key' do
+      offset = Offset.new('12345', '8121')
+      expect(offset.a_rotation).to eq('12')
+      expect(offset.b_rotation).to eq('23')
+      expect(offset.c_rotation).to eq('34')
+      expect(offset.d_rotation).to eq('45')
     end
   end
 end
