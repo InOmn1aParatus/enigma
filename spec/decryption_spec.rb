@@ -1,10 +1,10 @@
 require_relative './spec_helper'
 
-RSpec.describe Encrypt do
+RSpec.describe Decryption do
   context 'instantiation' do
     it 'exists' do
-      e = Encrypt.new
-      expect(e).to be_a(Encrypt)
+      d = Decryption.new
+      expect(d).to be_a(Decryption)
     end
   end
 end
