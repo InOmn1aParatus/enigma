@@ -28,19 +28,34 @@ class Offset
   end
 
   def a_rotation
-    @key[0..1]
+    @key[0..1].to_i
   end
 
   def b_rotation
-    @key[1..2]
+    @key[1..2].to_i
   end
 
   def c_rotation
-    @key[2..3]
+    @key[2..3].to_i
   end
 
   def d_rotation
-    @key[3..4]
+    @key[3..4].to_i
   end
 
+  def a_offset
+    @offset[0].to_i
+  end
+  
+  def b_offset
+    @offset[1].to_i
+  end
+  
+  def c_offset
+    @offset[2].to_i
+  end
+  
+  def d_offset
+    @offset[3].to_i
+  end
 end
