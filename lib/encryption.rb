@@ -56,6 +56,6 @@ class Encryption
   end
 
   def print
-    "Created '#{ARGV[1]}' with the key #{@key} and date #{@date}."
+    "Created '#{ARGV[1]}' with the key #{@offset.key} and date #{@offset.date}."
   end
 end

@@ -54,4 +54,8 @@ class Decryption
     end
     decrypted_message
   end
+
+  def print
+    "Created '#{ARGV[1]}' with the key #{@offset.key} and date #{@offset.date}."
+  end
 end
