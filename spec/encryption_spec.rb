@@ -23,6 +23,11 @@ RSpec.describe Encryption do
   end
 
   context 'methods' do
+    it 'encrypts letters' do
+      en = Encryption.new('12345', '200989')
+      expect(en.encrypt_a('a')).to eq('u')
+      expect(en.encrypt_a('!')).to eq('!')
+    end
     # xit 'encrypts messages'
     #   en = Encryption.new
     #   encryption = {
