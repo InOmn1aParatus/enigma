@@ -20,16 +20,16 @@ RSpec.describe Enigma do
       expect(enigma.encrypt('hello world', '02715', '040895')).to eq(encryption)
     end
 
-    # it 'encrypts using key only' do
-    #   allow(Date).to receive(:today).and_return(Date.new(1995, 0o8, 04))
-    #   enigma = Enigma.new
-    #   encryption = {
-    #     encryption: 'keder ohulw',
-    #     key: '02715',
-    #     date: '040895'
-    #   }
-    #   expect(enigma.encrypt('hello world', '02715')).to eq(encryption)
-    # end
+    it 'encrypts using key only' do
+      allow(Date).to receive(:today).and_return(Date.new(1995, 8, 4))
+      enigma = Enigma.new
+      encryption = {
+        encryption: 'keder ohulw',
+        key: '02715',
+        date: '040895'
+      }
+      expect(enigma.encrypt('hello world', '02715')).to eq(encryption)
+    end
 
     it 'decrypts messages' do
       enigma = Enigma.new
@@ -41,23 +41,32 @@ RSpec.describe Enigma do
       expect(enigma.decrypt('keder ohulw', '02715', '040895'))
     end
 
-    # xit 'decrypts using key only' do
-    #   enigma - Enigma.new
-    #   decryption = {
-    #     decryption: "hello world",
-    #     key: "02715",
-    #     date: nil
-    #   }
-    #   expect(enigma.decrypt(encrypted[:encryption], "02715")).to eq(decryption)
+    it 'decrypts using key only' do
+      allow(Date).to receive(:today).and_return(Date.new(1995, 8, 4))
+      enigma = Enigma.new
+      encrypted = {
+        encryption: 'keder ohulw',
+        key: '02715',
+        date: '040895'
+      }
+      decryption = {
+        decryption: "hello world",
+        key: "02715",
+        date: '040895'
+      }
+      expect(enigma.decrypt(encrypted[:encryption], "02715")).to eq(decryption)
+    end
 
-    # xit 'encrypts a message using random key + current date' do
-    #   enigma = Enigma.new
-    #   encryption = {
-    #     encryption: "keder ohulw",
-    #     key: nil,
-    #     date: nil
-    #   }
-    #   expect(enigma.encrypt('hello world')).to eq(encryption)
-    # end
+    it 'encrypts a message using random key + current date' do
+      allow(Date).to receive(:today).and_return(Date.new(1995, 8, 4))
+      allow_any_instance_of(Offset).to receive(:key_gen).and_return('02715')
+      enigma = Enigma.new
+      encryption = {
+        encryption: "keder ohulw",
+        key: '02715',
+        date: '040895'
+      }
+      expect(enigma.encrypt('hello world')).to eq(encryption)
+    end
   end
 end
