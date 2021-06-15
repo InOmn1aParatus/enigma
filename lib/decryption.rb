@@ -4,32 +4,34 @@ require_relative './offset'
 class Decryption
   attr_reader :characters,
               :offset,
-              :shifts
+              :shifts,
+              :key,
+              :date
 
   def initialize(key = nil, date = nil)
     @key = key
     @date = date
     @characters = CharacterList.new.list.reverse
-    @shifts = Offset.new(key, date).shifts
+    @offset = Offset.new(key, date)
   end
 
   def decrypt_a(char)
-    decryptor = Hash[@characters.zip(@characters.rotate(@shifts[0]))]
+    decryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[0]))]
     decryptor.fetch(char, char)
   end
 
   def decrypt_b(char)
-    decryptor = Hash[@characters.zip(@characters.rotate(@shifts[1]))]
+    decryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[1]))]
     decryptor.fetch(char, char)
   end
 
   def decrypt_c(char)
-    decryptor = Hash[@characters.zip(@characters.rotate(@shifts[2]))]
+    decryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[2]))]
     decryptor.fetch(char, char)
   end
 
   def decrypt_d(char)
-    decryptor = Hash[@characters.zip(@characters.rotate(@shifts[3]))]
+    decryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[3]))]
     decryptor.fetch(char, char)
   end
 
