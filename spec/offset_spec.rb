@@ -56,5 +56,10 @@ RSpec.describe Offset do
       expect(offset.c_shift).to eq(36)
       expect(offset.d_shift).to eq(46)
     end
+
+    it 'collects shifts into array' do
+      offset = Offset.new('12345', '200989')
+      expect(offset.shifts).to eq([20, 24, 36, 46])
+    end
   end
 end

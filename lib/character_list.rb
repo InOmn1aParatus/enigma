@@ -1,5 +1,8 @@
 class CharacterList
-  def list
-    ('a'..'z').to_a << ' '
+  attr_reader :list
+
+  def initialize
+    @list = ('a'..'z').to_a << ' '
   end
+
 end

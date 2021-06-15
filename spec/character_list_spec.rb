@@ -6,10 +6,8 @@ RSpec.describe CharacterList do
       char_list = CharacterList.new
       expect(char_list).to be_a(CharacterList)
     end
-  end
 
-  context 'methods' do
-    it 'contains list of characters' do
+    it 'contains a list of characters' do
       char_list = CharacterList.new
       expect(char_list.list[0]).to eq('a')
       expect(char_list.list[26]).to eq(' ')
