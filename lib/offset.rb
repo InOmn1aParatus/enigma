@@ -75,4 +75,7 @@ class Offset
     d_key + d_offset
   end
 
+  def shifts
+    [a_shift, b_shift, c_shift, d_shift]
+  end
 end
