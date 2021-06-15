@@ -4,32 +4,34 @@ require_relative './offset'
 class Encryption
   attr_reader :characters,
               :offset,
-              :shifts
+              :shifts,
+              :key,
+              :date
 
   def initialize(key = nil, date = nil)
     @key = key
     @date = date
     @characters = CharacterList.new.list
-    @shifts = Offset.new(key, date).shifts
+    @offset = Offset.new(key, date)
   end
 
   def encrypt_a(char)
-    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[0]))]
+    encryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[0]))]
     encryptor.fetch(char, char)
   end
 
   def encrypt_b(char)
-    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[1]))]
+    encryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[1]))]
     encryptor.fetch(char, char)
   end
 
   def encrypt_c(char)
-    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[2]))]
+    encryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[2]))]
     encryptor.fetch(char, char)
   end
 
   def encrypt_d(char)
-    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[3]))]
+    encryptor = Hash[@characters.zip(@characters.rotate(@offset.shifts[3]))]
     encryptor.fetch(char, char)
   end
 
@@ -51,5 +53,9 @@ class Encryption
       encrypted_message = encryption.join
     end
     encrypted_message
+  end
+
+  def print
+    "Created '#{ARGV[1]}' with the key #{@key} and date #{@date}."
   end
 end
