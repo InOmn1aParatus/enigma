@@ -35,14 +35,5 @@ RSpec.describe Encryption do
       en2 = Encryption.new('12345', '200989')
       expect(en2.encrypt("Hello World")).to eq("abudhxegkim")
     end
-    # xit 'encrypts messages'
-    #   en = Encryption.new
-    #   encryption = {
-    #     encryption: "keder ohulw",
-    #     key: "02715",
-    #     date: "040895"
-    #   }
-    #   expect(en.encrypt("hello world", "02715", "040895")).to eq(encryption)
-    # end
   end
 end
