@@ -9,7 +9,7 @@ RSpec.describe Offset do
 
     it 'generates key and date attributes when none are given' do
       allow_any_instance_of(Offset).to receive(:key_gen).and_return('12345')
-      allow(Date).to receive(:today).and_return(Date.new(2021, 06, 14))
+      allow(Date).to receive(:today).and_return(Date.new(2021, 0o6, 14))
       offset = Offset.new
       expect(offset.key).to eq('12345')
       expect(offset.offset).to eq('5641')
@@ -21,7 +21,7 @@ RSpec.describe Offset do
       offset = Offset.new
       expect(offset.key_gen.length).to eq(5)
     end
-    
+
     it 'generates offset based on given date' do
       offset = Offset.new('12345', '200989')
       expect(offset.offset).to eq('8121')

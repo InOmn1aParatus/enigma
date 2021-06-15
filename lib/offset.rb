@@ -4,17 +4,17 @@ class Offset
   attr_reader :key, :date, :offset
 
   def initialize(key = nil, date = nil)
-    if key.nil?
-      @key = key_gen
-    else
-      @key = key
-    end
-  
-    if date.nil?
-      @date = Date.today.strftime('%d%m%y')
-    else
-      @date = date
-    end
+    @key = if key.nil?
+             key_gen
+           else
+             key
+           end
+
+    @date = if date.nil?
+              Date.today.strftime('%d%m%y')
+            else
+              date
+            end
     offset_gen
   end
 
@@ -46,15 +46,15 @@ class Offset
   def a_offset
     @offset[0].to_i
   end
-  
+
   def b_offset
     @offset[1].to_i
   end
-  
+
   def c_offset
     @offset[2].to_i
   end
-  
+
   def d_offset
     @offset[3].to_i
   end
@@ -62,19 +62,20 @@ class Offset
   def a_shift
     a_key + a_offset
   end
-  
+
   def b_shift
     b_key + b_offset
   end
-  
+
   def c_shift
     c_key + c_offset
   end
-  
+
   def d_shift
     d_key + d_offset
   end
-# Possible refactor ^
+
+  # Possible refactor ^
   def shifts
     [a_shift, b_shift, c_shift, d_shift]
   end

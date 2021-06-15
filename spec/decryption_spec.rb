@@ -30,10 +30,10 @@ RSpec.describe Decryption do
     end
 
     it 'decrypts message' do
-      de1 = Decryption.new("02715", "040895")
-      expect(de1.decrypt("keder ohulw")).to eq("hello world")
+      de1 = Decryption.new('02715', '040895')
+      expect(de1.decrypt('keder ohulw')).to eq('hello world')
       de2 = Decryption.new('12345', '200989')
-      expect(de2.decrypt("abudhxegkim")).to eq("hello world")
+      expect(de2.decrypt('abudhxegkim')).to eq('hello world')
     end
   end
 end

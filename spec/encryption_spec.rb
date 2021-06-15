@@ -30,10 +30,10 @@ RSpec.describe Encryption do
     end
 
     it 'encrypts message' do
-      en1 = Encryption.new("02715", "040895")
-      expect(en1.encrypt("Hello World")).to eq("keder ohulw")
+      en1 = Encryption.new('02715', '040895')
+      expect(en1.encrypt('Hello World')).to eq('keder ohulw')
       en2 = Encryption.new('12345', '200989')
-      expect(en2.encrypt("Hello World")).to eq("abudhxegkim")
+      expect(en2.encrypt('Hello World')).to eq('abudhxegkim')
     end
   end
 end
