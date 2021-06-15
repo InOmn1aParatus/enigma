@@ -50,11 +50,11 @@ RSpec.describe Enigma do
         date: '040895'
       }
       decryption = {
-        decryption: "hello world",
-        key: "02715",
+        decryption: 'hello world',
+        key: '02715',
         date: '040895'
       }
-      expect(enigma.decrypt(encrypted[:encryption], "02715")).to eq(decryption)
+      expect(enigma.decrypt(encrypted[:encryption], '02715')).to eq(decryption)
     end
 
     it 'encrypts a message using random key + current date' do
@@ -62,7 +62,7 @@ RSpec.describe Enigma do
       allow_any_instance_of(Offset).to receive(:key_gen).and_return('02715')
       enigma = Enigma.new
       encryption = {
-        encryption: "keder ohulw",
+        encryption: 'keder ohulw',
         key: '02715',
         date: '040895'
       }
