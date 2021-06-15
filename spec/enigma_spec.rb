@@ -7,33 +7,21 @@ RSpec.describe Enigma do
       enigma = Enigma.new
       expect(enigma).to be_a(Enigma)
     end
-
-    it 'accesses character list' do
-      enigma = Enigma.new
-      expect(enigma.characters[0]).to eq('a')
-    end
   end
 
   context 'methods' do
-    # xit 'encrypts messages'
-    #   enigma = Enigma.new
-    #   encryption = {
-    #     encryption: "keder ohulw",
-    #     key: "02715",
-    #     date: "040895"
-    #   }
-    #   expect(enigma.encrypt("hello world", "02715", "040895")).to eq(encryption)
-    # end
+    it 'encrypts messages' do
+      enigma = Enigma.new
+      encryption = {
+        encryption: "keder ohulw",
+        key: "02715",
+        date: "040895"
+      }
+      expect(enigma.encrypt("hello world", "02715", "040895")).to eq(encryption)
+    end
+  end
+end
 
-    # xit 'encrypts using key only' do
-    #   enigma = Enigma.new
-    #   encryption = {
-    #     encryption: "keder ohulw",
-    #     key: "02715",
-    #     date: Date.today
-    #   }
-    #   expect(enigma.encrypt("hello world", "02715")).to eq(encryption)
-    # end
 
     # xit 'decrypts messages' do
     #   enigma = Enigma.new
@@ -64,5 +52,3 @@ RSpec.describe Enigma do
     #   }
     #   expect(enigma.encrypt('hello world')).to eq(encryption)
     # end
-  end
-end
