@@ -15,10 +15,10 @@ RSpec.describe Decryption do
 
     it 'has access to offset shifts' do
       de = Decryption.new('12345', '200989')
-      expect(de.shifts[0]).to eq(20)
-      expect(de.shifts[1]).to eq(24)
-      expect(de.shifts[2]).to eq(36)
-      expect(de.shifts[3]).to eq(46)
+      expect(de.offset.shifts[0]).to eq(20)
+      expect(de.offset.shifts[1]).to eq(24)
+      expect(de.offset.shifts[2]).to eq(36)
+      expect(de.offset.shifts[3]).to eq(46)
     end
   end
 
