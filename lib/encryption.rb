@@ -14,23 +14,23 @@ class Encryption
   end
 
   def encrypt_a(char)
-    encrypter = Hash[@characters.zip(@characters.rotate(@shifts[0]))]
-    encrypter.fetch(char, char)
+    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[0]))]
+    encryptor.fetch(char, char)
   end
 
   def encrypt_b(char)
-    encrypter = Hash[@characters.zip(@characters.rotate(@shifts[1]))]
-    encrypter.fetch(char, char)
+    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[1]))]
+    encryptor.fetch(char, char)
   end
 
   def encrypt_c(char)
-    encrypter = Hash[@characters.zip(@characters.rotate(@shifts[2]))]
-    encrypter.fetch(char, char)
+    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[2]))]
+    encryptor.fetch(char, char)
   end
 
   def encrypt_d(char)
-    encrypter = Hash[@characters.zip(@characters.rotate(@shifts[3]))]
-    encrypter.fetch(char, char)
+    encryptor = Hash[@characters.zip(@characters.rotate(@shifts[3]))]
+    encryptor.fetch(char, char)
   end
 
   def encrypt(message)
