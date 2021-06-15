@@ -9,7 +9,7 @@ class Decryption
   def initialize(key = nil, date = nil)
     @key = key
     @date = date
-    @characters = CharacterList.new.list
+    @characters = CharacterList.new.list.reverse
     @shifts = Offset.new(key, date).shifts
   end
 
