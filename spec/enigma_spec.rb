@@ -40,19 +40,6 @@ RSpec.describe Enigma do
       }
       expect(enigma.decrypt("keder ohulw", "02715", "040895"))
     end
-  end
-end
-
-
-    # xit 'decrypts messages' do
-    #   enigma = Enigma.new
-    #   decryption = {
-    #     decryption: "hello world",
-    #     key: "02715",
-    #     date: "040895"
-    #   }
-    #   expect(enigma.decrypt("keder ohulw", "02715", "040895"))
-    # end
 
     # xit 'decrypts using key only' do
     #   enigma - Enigma.new
@@ -62,7 +49,6 @@ end
     #     date: nil
     #   }
     #   expect(enigma.decrypt(encrypted[:encryption], "02715")).to eq(decryption)
-    # end
 
     # xit 'encrypts a message using random key + current date' do
     #   enigma = Enigma.new
@@ -73,3 +59,5 @@ end
     #   }
     #   expect(enigma.encrypt('hello world')).to eq(encryption)
     # end
+  end
+end
