@@ -74,7 +74,7 @@ class Offset
   def d_shift
     d_key + d_offset
   end
-
+# Possible refactor ^
   def shifts
     [a_shift, b_shift, c_shift, d_shift]
   end
