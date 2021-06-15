@@ -17,5 +17,5 @@ I performed lots of research to get my methods working in ways that adhered to R
 In this category, I believe I have *met expectations*.
 
 #### TDD:
-My git history should reveal that I was writing tests before implementing solutions in my code. In instances where I was not, I was experimenting in a REPL environment and bringing in tested code. There are aspects of the code that are not tested (e.g. file IO). There are also methods that gave me some trouble in testing, but my coverage is very high at **99.19%** on the last test. The only unfortunate results have been a few hard test cases to crack.
-I am closer to *meeting expectations* in this category than not, but I could be convinced that I have fallen short.
+My git history should reveal that I was writing tests before implementing solutions in my code. In instances where I was not, I was experimenting in a REPL environment and bringing in tested code. There are aspects of the code that are not tested (e.g. file IO). My coverage is very high, being **99.25%** in the last round of tests.
+In this category, I believe my project has *met expectations*.
