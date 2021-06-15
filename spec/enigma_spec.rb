@@ -19,6 +19,27 @@ RSpec.describe Enigma do
       }
       expect(enigma.encrypt("hello world", "02715", "040895")).to eq(encryption)
     end
+
+    # xit 'encrypts using key only' do
+    #   allow(Date).to receive(:today).and_return(Date.new(1995, 08, 04))
+    #   enigma = Enigma.new
+    #   encryption = {
+    #     encryption: "keder ohulw",
+    #     key: "02715",
+    #     date: '040895'
+    #   }
+    #   expect(enigma.encrypt("hello world", "02715")).to eq(encryption)
+    # end
+
+    it 'decrypts messages' do
+      enigma = Enigma.new
+      decryption = {
+        decryption: "hello world",
+        key: "02715",
+        date: "040895"
+      }
+      expect(enigma.decrypt("keder ohulw", "02715", "040895"))
+    end
   end
 end
 
@@ -38,7 +59,7 @@ end
     #   decryption = {
     #     decryption: "hello world",
     #     key: "02715",
-    #     date: Date.today
+    #     date: nil
     #   }
     #   expect(enigma.decrypt(encrypted[:encryption], "02715")).to eq(decryption)
     # end
@@ -47,8 +68,8 @@ end
     #   enigma = Enigma.new
     #   encryption = {
     #     encryption: "keder ohulw",
-    #     key: "02715",
-    #     date: Date.today
+    #     key: nil,
+    #     date: nil
     #   }
     #   expect(enigma.encrypt('hello world')).to eq(encryption)
     # end
