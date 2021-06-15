@@ -12,10 +12,17 @@ RSpec.describe Encryption do
       expect(en.characters[0]).to eq('a')
       expect(en.characters[26]).to eq(' ')
     end
+
+    it 'has access to offset shifts' do
+      en = Encryption.new('12345', '200989')
+      expect(en.shifts[0]).to eq(20)
+      expect(en.shifts[1]).to eq(24)
+      expect(en.shifts[2]).to eq(36)
+      expect(en.shifts[3]).to eq(46)
+    end
   end
 
   context 'methods' do
-
     # xit 'encrypts messages'
     #   en = Encryption.new
     #   encryption = {
