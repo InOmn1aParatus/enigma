@@ -13,13 +13,19 @@
 ## Usage Examples
 
 Algorithm-Based Encryption/Decryption
+
 [![Screen-Shot-2021-09-18-at-12-49-48-PM.png](https://i.postimg.cc/25MDn2Zq/Screen-Shot-2021-09-18-at-12-49-48-PM.png)](https://postimg.cc/xkvh2GgY)
 
+
 Encryption Example
+
 [![Screen-Shot-2021-09-18-at-12-50-55-PM.png](https://i.postimg.cc/9XS7rh0V/Screen-Shot-2021-09-18-at-12-50-55-PM.png)](https://postimg.cc/s1YXNb50)
 
+
 Decrypted Message
+
 [![Screen-Shot-2021-09-18-at-12-51-05-PM.png](https://i.postimg.cc/J7bs4Bf3/Screen-Shot-2021-09-18-at-12-51-05-PM.png)](https://postimg.cc/NLjsdLfL)
+
 *-Voltaire*
 
 
@@ -31,7 +37,7 @@ Decrypted Message
 
 ## How to Contribute
 
-1. Fork it (<https://github.com/InOmn1aParatus/enigma/fork>)
+1. Fork it (<https://github.com/matt-kragen/enigma/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
