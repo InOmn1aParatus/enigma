@@ -10,7 +10,7 @@
 ## Contributors
 
 👤  **Matt Kragen**
-- [GitHub](https://github.com/InOmn1aParatus)
+- [GitHub](https://github.com/matt-kragen)
 - [LinkedIn](https://www.linkedin.com/in/mattkragen/)
 
 ## How to Contribute
