@@ -2,6 +2,7 @@
 > Enigma is an encryption/decryption program that writes or decrypts messages onto a .txt file
 
 - [Features](#features)
+- [How to Use](#how-to-use)
 - [Usage Examples](#usage-examples)
 - [Contributors](#contributors)
 - [How to Contribute](#how-to-contribute)
@@ -9,6 +10,21 @@
 ## Features
 
 **Enigma** reads a message using File.IO and encrypts it to another file. This process can be reversed using the same files using a *key* and a *date*.
+
+## How to Use
+
+A user can write their message in the `message.txt` file in the root directory. They are then able to encrypt/decrypt message like so:
+
+Encryption
+```
+$ ruby ./lib/encrypt.rb message.txt encrypted.txt
+Created 'encrypted.txt' with the key 82648 and date 240818
+```
+Decryption
+```
+$ ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 82648 240818
+Created 'decrypted.txt' with the key 82648 and date 240818
+```
 
 ## Usage Examples
 
