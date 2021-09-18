@@ -8,7 +8,7 @@
 
 ## Features
 
-> Enigma < will take a message using File.IO and encrypt it to another file. This process can be reversed using the same files using a *key* and a *date*.
+**Enigma** reads a message using File.IO and encrypts it to another file. This process can be reversed using the same files using a *key* and a *date*.
 
 ## Usage Examples
 
